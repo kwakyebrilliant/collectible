@@ -31,12 +31,7 @@ export default function Navigation() {
         </li>
         <li className='relative group hover:bg-white hover:text-black hover:rounded-lg'>
             <Link to="/">
-            Home
-          </Link>
-        </li>
-        <li className='hover:bg-white hover:text-black hover:rounded-lg'>
-          <Link to="/">
-            Tokenization
+            Shop
           </Link>
         </li>
       </ul>
@@ -68,10 +63,7 @@ export default function Navigation() {
               <Link to="/" onClick={handleClose}>Home</Link>
             </li>
             <li className='border-b-2 border-zinc-300 w-full'>
-              <Link to="/" onClick={handleClose}>Home</Link>
-            </li>
-            <li className='border-b-2 border-zinc-300 w-full'>
-              <Link to="/" onClick={handleClose}>Tokenization</Link>
+              <Link to="/" onClick={handleClose}>Shop</Link>
             </li>
             <div className='my-4'>
               <a

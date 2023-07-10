@@ -7,6 +7,13 @@ function Home() {
         
         <Navigation />
 
+          <section>
+          <div className="mx-auto bg-black w-full px-4 pt-32 lg:flex lg:h-screen lg:items-center">
+
+          </div>
+          </section>
+
+
         Home
     </div>
   )

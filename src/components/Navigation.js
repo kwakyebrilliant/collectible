@@ -1,8 +1,9 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import { FaLinode } from 'react-icons/fa'
+import { FaLinode, FaUserAlt } from 'react-icons/fa'
 
 export default function Navigation() {
     const [nav, setNav] = useState(false)
@@ -47,11 +48,28 @@ export default function Navigation() {
             Connect
             </span>
             </a>
+
+            <a
+            href="#"
+            className="block shrink-0 rounded-lg bg-white p-2.5 border border-gray-100 shadow-sm hover:bg-transparent hover:text-gray-100 hover:border hover:border-gray-100"
+          >
+            <span className="sr-only">Prfile</span>
+            <FaUserAlt className='hover:text-gray-100 text-black lg:w-5 lg:h-5' />
+          </a>
     
        
         </div>
         <div className='md:hidden mr-4' onClick={handleClick}>
-            {!nav ? <MenuIcon className='w-5 text-white' /> : <XIcon className='w-5 text-white' />}
+            {!nav ? <MenuIcon className='w-5 text-white' /> : <div className='flex'>
+            <a
+            href="#"
+            className="block mx-2 shrink-0 rounded-lg bg-white p-2.5 border border-gray-100 shadow-sm hover:bg-transparent hover:text-gray-100 hover:border hover:border-gray-100"
+          >
+            <span className="sr-only">Prfile</span>
+            <FaUserAlt className='hover:text-gray-100 text-black lg:w-5 lg:h-5' />
+          </a>
+                <XIcon className='w-5 text-white' /> 
+                </div>}
           
         </div>
       </div>

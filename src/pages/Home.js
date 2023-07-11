@@ -52,10 +52,10 @@ function Home() {
     </div>
         {/* circles here */}
         <div className="absolute top-20 right-0 mr-16 flex justify-end items-end">
-          <div className="lg:h-32 lg:w-32 rounded-full bg-emerald-50 shadow-lg transform rotate-45 animate-circle" />
+          <div className="lg:h-32 lg:w-32 rounded-full bg-gray-100 shadow-slate-400 shadow-md transform rotate-45 animate-circle" />
         </div>
         <div className="absolute bottom-0 -left-0 flex justify-end items-end">
-          <div className="lg:w-24 lg:h-24 rounded-full bg-emerald-50 shadow-lg transform rotate-45 animate-circle -ml-10" />
+          <div className="lg:w-24 lg:h-24 rounded-full bg-gray-100 shadow-slate-400 shadow-md transform rotate-45 animate-circle -ml-10" />
         </div>
   </section>
 </div>

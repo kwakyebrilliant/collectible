@@ -18,7 +18,7 @@ export default function Navigation() {
     return (
 
         // Navigation links on large screen
-        <div className='w-screen h-[70px] z-10 fixed drop-shadow-lg'>
+        <div className='w-screen bg-black h-[70px] z-10 fixed drop-shadow-lg'>
       <div className='px-2 flex justify-between items-center w-full h-full'>
       <div className='flex items-center'>
       <FaLinode className='text-white lg:w-[35px] lg:h-[35px]' />

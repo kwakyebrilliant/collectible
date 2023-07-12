@@ -128,7 +128,7 @@ function Profile() {
         <div className='bg-black mt-8 shadow-lg shadow-gray-700 lg:mx-20 mx-8 rounded-md h-full'>
 
         <div className='flex justify-center lg:pt-16 pt-8'>
-            <h1 className='lg:text-5xl text-2xl font-bold text-gray-100'>Collectibles in</h1>
+            <h1 className='lg:text-5xl text-xl font-bold text-gray-100'>Collectibles in</h1>
             {tabNames.map((name, index) => (
           <h1 className='lg:text-5xl text-2xl font-bold ml-1.5 text-emerald-600' key={index} style={{ display: activeTab === index ? 'block' : 'none' }}>
             {name}
@@ -358,150 +358,191 @@ function Profile() {
 
           {activeTab === 1 && 
         <div>
-          <section>
+           <section>
           <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
             <div
               className="[column-fill:_balance] sm:columns-2 sm:gap-6 lg:columns-3 lg:gap-8"
             >
-              <div className="mb-8 sm:break-inside-avoid">
-                <blockquote className="rounded-xl bg-gray-50 p-6 shadow">
-                  <p class="leading-relaxed text-gray-700">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-                    minima dicta amet, molestiae aliquam incidunt suscipit recusandae
-                    labore ratione doloremque, architecto et illo minus quo tenetur
-                    ducimus, voluptatibus repellendus fuga aperiam vel ab! Ipsam
-                    corrupti blanditiis dolorum! Officia assumenda rem nam, eveniet enim
-                    ad inventore laudantium est illum voluptatem quis.
+          
+
+          <a href="#" className="group relative bg-black">
+            <img
+              alt="Developer"
+              src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+              className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
+            />
+
+            <div className="relative p-4 sm:p-6 lg:p-8">
+              <p className="text-sm font-medium uppercase tracking-widest text-emerald-600">
+                Developer
+              </p>
+
+              <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+              <div className="mt-32 sm:mt-48 lg:mt-64">
+                <div
+                  className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <p className="text-sm text-white">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+                    perferendis hic asperiores quibusdam quidem voluptates doloremque
+                    reiciendis nostrum harum. Repudiandae?
                   </p>
-                </blockquote>
-
-                <div className="mt-4 flex items-center gap-4">
-                  <img
-                    alt="Woman"
-                    src="https://images.unsplash.com/photo-1603366445787-09714680cbf1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
-                    className="h-12 w-12 rounded-full object-cover"
-                  />
-
-                  <div className="text-sm">
-                    <p className="font-medium">Gladis Lennon</p>
-                    <p className="mt-1">Head of SEO</p>
-                  </div>
                 </div>
               </div>
+            </div>
+          </a>
 
-              <div className="mb-8 sm:break-inside-avoid">
-                <blockquote className="rounded-xl bg-gray-50 p-6 shadow">
-                  <p className="leading-relaxed text-gray-700">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore vel
-                    quo deserunt quos expedita minima incidunt sed tempora, a architecto
-                    consectetur reprehenderit, in repellat voluptatum.
+
+          <a href="#" className="group relative bg-black">
+            <img
+              alt="Developer"
+              src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+              className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
+            />
+
+            <div className="relative p-4 sm:p-6 lg:p-8">
+              <p className="text-sm font-medium uppercase tracking-widest text-emerald-600">
+                Developer
+              </p>
+
+              <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+              <div className="mt-32 sm:mt-48 lg:mt-64">
+                <div
+                  className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <p className="text-sm text-white">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+                    perferendis hic asperiores quibusdam quidem voluptates doloremque
+                    reiciendis nostrum harum. Repudiandae?
                   </p>
-                </blockquote>
-
-                <div className="mt-4 flex items-center gap-4">
-                  <img
-                    alt="Woman"
-                    src="https://images.unsplash.com/photo-1603366445787-09714680cbf1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
-                    className="h-12 w-12 rounded-full object-cover"
-                  />
-
-                  <div className="text-sm">
-                    <p className="font-medium">Gladis Lennon</p>
-                    <p className="mt-1">Head of SEO</p>
-                  </div>
                 </div>
               </div>
+            </div>
+          </a>
 
-              <div className="mb-8 sm:break-inside-avoid">
-                <blockquote className="rounded-xl bg-gray-50 p-6 shadow">
-                  <p className="leading-relaxed text-gray-700">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-                    beatae incidunt perferendis soluta facilis voluptas dicta
-                    repudiandae quasi asperiores libero, exercitationem molestiae autem
-                    sapiente dolore nulla non consequatur. Eaque, dolores.
+
+          
+          <a href="#" className="group relative bg-black">
+            <img
+              alt="Developer"
+              src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+              className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
+            />
+
+            <div className="relative p-4 sm:p-6 lg:p-8">
+              <p className="text-sm font-medium uppercase tracking-widest text-emerald-600">
+                Developer
+              </p>
+
+              <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+              <div className="mt-32 sm:mt-48 lg:mt-64">
+                <div
+                  className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <p className="text-sm text-white">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+                    perferendis hic asperiores quibusdam quidem voluptates doloremque
+                    reiciendis nostrum harum. Repudiandae?
                   </p>
-                </blockquote>
-
-                <div className="mt-4 flex items-center gap-4">
-                  <img
-                    alt="Woman"
-                    src="https://images.unsplash.com/photo-1603366445787-09714680cbf1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
-                    className="h-12 w-12 rounded-full object-cover"
-                  />
-
-                  <div className="text-sm">
-                    <p className="font-medium">Gladis Lennon</p>
-                    <p className="mt-1">Head of SEO</p>
-                  </div>
                 </div>
               </div>
+            </div>
+          </a>
 
-              <div className="mb-8 sm:break-inside-avoid">
-                <blockquote className="rounded-xl bg-gray-50 p-6 shadow">
-                  <p className="leading-relaxed text-gray-700">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-                    doloribus eius aut unde, dolores accusantium!
+
+
+          <a href="#" className="group relative bg-black">
+            <img
+              alt="Developer"
+              src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+              className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
+            />
+
+            <div className="relative p-4 sm:p-6 lg:p-8">
+              <p className="text-sm font-medium uppercase tracking-widest text-emerald-600">
+                Developer
+              </p>
+
+              <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+              <div className="mt-32 sm:mt-48 lg:mt-64">
+                <div
+                  className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <p className="text-sm text-white">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+                    perferendis hic asperiores quibusdam quidem voluptates doloremque
+                    reiciendis nostrum harum. Repudiandae?
                   </p>
-                </blockquote>
-
-                <div className="mt-4 flex items-center gap-4">
-                  <img
-                    alt="Woman"
-                    src="https://images.unsplash.com/photo-1603366445787-09714680cbf1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
-                    className="h-12 w-12 rounded-full object-cover"
-                  />
-
-                  <div className="text-sm">
-                    <p className="font-medium">Gladis Lennon</p>
-                    <p className="mt-1">Head of SEO</p>
-                  </div>
                 </div>
               </div>
+            </div>
+          </a>
 
-              <div className="mb-8 sm:break-inside-avoid">
-                <blockquote className="rounded-xl bg-gray-50 p-6 shadow">
-                  <p className="leading-relaxed text-gray-700">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi a
-                    voluptatum quidem nulla quisquam natus velit provident earum esse,
-                    odio numquam labore recusandae similique sunt.
+
+          <a href="#" className="group relative bg-black">
+            <img
+              alt="Developer"
+              src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+              className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
+            />
+
+            <div className="relative p-4 sm:p-6 lg:p-8">
+              <p className="text-sm font-medium uppercase tracking-widest text-emerald-600">
+                Developer
+              </p>
+
+              <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+              <div className="mt-32 sm:mt-48 lg:mt-64">
+                <div
+                  className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <p className="text-sm text-white">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+                    perferendis hic asperiores quibusdam quidem voluptates doloremque
+                    reiciendis nostrum harum. Repudiandae?
                   </p>
-                </blockquote>
-
-                <div className="mt-4 flex items-center gap-4">
-                  <img
-                    alt="Woman"
-                    src="https://images.unsplash.com/photo-1603366445787-09714680cbf1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
-                    className="h-12 w-12 rounded-full object-cover"
-                  />
-
-                  <div className="text-sm">
-                    <p className="font-medium">Gladis Lennon</p>
-                    <p className="mt-1">Head of SEO</p>
-                  </div>
                 </div>
               </div>
+            </div>
+          </a>
 
-              <div className="mb-8 sm:break-inside-avoid">
-                <blockquote className="rounded-xl bg-gray-50 p-6 shadow">
-                  <p className="leading-relaxed text-gray-700">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius ut
-                    necessitatibus, repudiandae qui dolor minima.
+
+          <a href="#" className="group relative bg-black">
+            <img
+              alt="Developer"
+              src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+              className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
+            />
+
+            <div className="relative p-4 sm:p-6 lg:p-8">
+              <p className="text-sm font-medium uppercase tracking-widest text-emerald-600">
+                Developer
+              </p>
+
+              <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+              <div className="mt-32 sm:mt-48 lg:mt-64">
+                <div
+                  className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <p className="text-sm text-white">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+                    perferendis hic asperiores quibusdam quidem voluptates doloremque
+                    reiciendis nostrum harum. Repudiandae?
                   </p>
-                </blockquote>
-
-                <div className="mt-4 flex items-center gap-4">
-                  <img
-                    alt="Woman"
-                    src="https://images.unsplash.com/photo-1603366445787-09714680cbf1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
-                    className="h-12 w-12 rounded-full object-cover"
-                  />
-
-                  <div className="text-sm">
-                    <p className="font-medium">Gladis Lennon</p>
-                    <p className="mt-1">Head of SEO</p>
-                  </div>
                 </div>
               </div>
+            </div>
+          </a>
+
+         
+
+
             </div>
           </div>
         </section>

@@ -7,6 +7,7 @@ import images2 from '../assets/images2.svg';
 import {
     FaPlusCircle
   } from "react-icons/fa";
+import Footer from '../components/Footer';
 
 function Profile() {
     const [angle, setAngle] = useState(0);
@@ -562,6 +563,8 @@ function Profile() {
         </div>
 
         </div>
+
+        <Footer />
         
     </div>
   )

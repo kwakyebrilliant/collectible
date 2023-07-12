@@ -90,7 +90,85 @@ function Profile() {
         </div>
 
 
-        
+        <div className='mx-32'>
+        <label
+        for="Search"
+        className="relative block overflow-hidden border-b border-gray-200 bg-transparent pt-3 focus-within:border-blue-600"
+        >
+        <input
+            type="text"
+            id="Search"
+            placeholder="Search collectibles"
+            className="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none sm:text-sm"
+        />
+
+        <span
+            className="absolute start-0 top-2 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs"
+        >
+            Search
+        </span>
+        </label>
+        </div>
+
+        <div className="pt-8 lg:flex mx-auto justify-center">
+          <section>
+            <div className="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 gap-8 lg:grid-cols-6 lg:items-stretch">
+                  
+                 
+                      <a href="#" className="bg-gray-100 flex rounded">
+                        <img
+                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80"
+                          alt=""
+                          className="object-cover w-full rounded aspect-square lg:hover:transform lg:hover:-rotate-3 lg:hover:translate-x-2 lg:hover:translate-y-2"
+                        />
+                    </a>
+
+                    <a href="#" className="bg-gray-100 flex rounded">
+                        <img
+                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80"
+                          alt=""
+                          className="object-cover w-full rounded aspect-square lg:hover:transform lg:hover:-rotate-3 lg:hover:translate-x-2 lg:hover:translate-y-2"
+                        />
+                    </a>
+
+                    <a href="#" className="bg-gray-100 flex rounded">
+                        <img
+                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80"
+                          alt=""
+                          className="object-cover w-full rounded aspect-square lg:hover:transform lg:hover:-rotate-3 lg:hover:translate-x-2 lg:hover:translate-y-2"
+                        />
+                    </a>
+
+                    <a href="#" className="bg-gray-100 flex rounded">
+                        <img
+                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80"
+                          alt=""
+                          className="object-cover w-full rounded aspect-square lg:hover:transform lg:hover:-rotate-3 lg:hover:translate-x-2 lg:hover:translate-y-2"
+                        />
+                    </a>
+
+                    <a href="#" className="bg-gray-100 flex rounded">
+                        <img
+                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80"
+                          alt=""
+                          className="object-cover w-full rounded aspect-square lg:hover:transform lg:hover:-rotate-3 lg:hover:translate-x-2 lg:hover:translate-y-2"
+                        />
+                    </a>
+
+                    <a href="#" className="bg-gray-100 flex rounded">
+                        <img
+                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80"
+                          alt=""
+                          className="object-cover w-full rounded aspect-square lg:hover:transform lg:hover:-rotate-3 lg:hover:translate-x-2 lg:hover:translate-y-2"
+                        />
+                    </a>
+
+                
+              </div>
+            </div>
+          </section>
+        </div>
         
     </div>
   )

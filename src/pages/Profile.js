@@ -50,7 +50,7 @@ function Profile() {
                     </span>
                 </div>
 
-                <div className="flex bottom-40 relative">
+                <div className=" hidden sm:block bottom-40 relative">
                 {[1, 2, 3].map((index) => {
                   const radius = 100;
                   const position = calculatePosition(radius, angle + (index - 1) * 120);
@@ -76,7 +76,7 @@ function Profile() {
                     >
                         <FaPlusCircle className="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
                         <span className="text-sm font-medium">
-                            Upload File
+                            Upload
                         </span>
                     </a>
                 </div>
@@ -88,6 +88,9 @@ function Profile() {
             </div>
           </section>
         </div>
+
+
+        
         
     </div>
   )

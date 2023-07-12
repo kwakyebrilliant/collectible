@@ -27,6 +27,14 @@ function Profile() {
     return { circleX, circleY };
   };
 
+  const [activeTab, setActiveTab] = useState(0);
+
+  const handleTabClick = (index) => {
+    setActiveTab(index);
+  };
+
+  const tabNames = ['Your Uploads', 'Acquired'];
+
   return (
     <div className='bg-black'>
         
@@ -114,106 +122,401 @@ function Profile() {
 
         <div>
 
-        <div className="relative">
-
-        {/* background image */}
-        <div
-          className="fixed inset-0 z-10"
-          style={{
-            backgroundImage: `url(${images2})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            opacity: 0.1,
-          }}
-        ></div>
+        <div className="relative pb-16" style={{ backgroundImage: `url(${images2})`}}>
         
 
-        <div className='flex mx-28 pt-16'>
-          <h2 className='text-white font-bold'>
-              Your Uploads
-          </h2>
-            
+        <div className='bg-black mt-8 shadow-lg shadow-gray-700 lg:mx-20 mx-8 rounded-md h-full'>
+
+        <div className='flex justify-center lg:pt-16 pt-8'>
+            <h1 className='lg:text-5xl text-2xl font-bold text-gray-100'>Collectibles in</h1>
+            {tabNames.map((name, index) => (
+          <h1 className='lg:text-5xl text-2xl font-bold ml-1.5 text-emerald-600' key={index} style={{ display: activeTab === index ? 'block' : 'none' }}>
+            {name}
+          </h1>
+        ))}
           </div>
 
-        <div className="lg:flex mx-auto justify-center">
+          <div className="">
+          <nav aria-label="Tabs" className="overflow-x-auto sm:w-full md:w-2/3 mx-auto">
+          <ul className="flex whitespace-nowrap">
+            {tabNames.map((name, index) => (
+              <li
+                key={index}
+                className={`flex-1 cursor-pointer ${
+                  activeTab === index ? '' : ''
+                }`}
+                onClick={() => handleTabClick(index)}
+              >
+                <div className="relative block p-4">
+                  <div className="flex items-center justify-center gap-4">
+                    <span className="text-sm font-medium text-gray-100">{name}</span>
+                  </div>
+                  {activeTab === index && (
+                    <span className="absolute bottom-0 left-0 h-0.5 bg-emerald-600 w-full"></span>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div className="p-4">
+
+        {activeTab === 0 && 
+        <div>
+
           <section>
-            <div className="max-w-screen-xl px-4 py-2 mx-auto sm:py-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-2 gap-8 lg:grid-cols-4 lg:items-stretch">
-                  
-                 
-                      <a href="#" className="bg-gray-100 flex rounded">
-                        <img
-                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80"
-                          alt=""
-                          className="object-cover w-full rounded aspect-square lg:hover:transform lg:hover:-rotate-3 lg:hover:translate-x-2 lg:hover:translate-y-2"
-                        />
-                    </a>
+          <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+            <div
+              className="[column-fill:_balance] sm:columns-2 sm:gap-6 lg:columns-3 lg:gap-8"
+            >
+          
 
-                    <a href="#" className="bg-gray-100 flex rounded">
-                        <img
-                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80"
-                          alt=""
-                          className="object-cover w-full rounded aspect-square lg:hover:transform lg:hover:-rotate-3 lg:hover:translate-x-2 lg:hover:translate-y-2"
-                        />
-                    </a>
+          <a href="#" className="group relative bg-black">
+            <img
+              alt="Developer"
+              src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+              className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
+            />
 
-                    <a href="#" className="bg-gray-100 flex rounded">
-                        <img
-                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80"
-                          alt=""
-                          className="object-cover w-full rounded aspect-square lg:hover:transform lg:hover:-rotate-3 lg:hover:translate-x-2 lg:hover:translate-y-2"
-                        />
-                    </a>
+            <div className="relative p-4 sm:p-6 lg:p-8">
+              <p className="text-sm font-medium uppercase tracking-widest text-emerald-600">
+                Developer
+              </p>
 
-                    <a href="#" className="bg-gray-100 flex rounded">
-                        <img
-                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80"
-                          alt=""
-                          className="object-cover w-full rounded aspect-square lg:hover:transform lg:hover:-rotate-3 lg:hover:translate-x-2 lg:hover:translate-y-2"
-                        />
-                    </a>
+              <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
 
-                
+              <div className="mt-32 sm:mt-48 lg:mt-64">
+                <div
+                  className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <p className="text-sm text-white">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+                    perferendis hic asperiores quibusdam quidem voluptates doloremque
+                    reiciendis nostrum harum. Repudiandae?
+                  </p>
+                </div>
               </div>
             </div>
-          </section>
+          </a>
+
+
+          <a href="#" className="group relative bg-black">
+            <img
+              alt="Developer"
+              src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+              className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
+            />
+
+            <div className="relative p-4 sm:p-6 lg:p-8">
+              <p className="text-sm font-medium uppercase tracking-widest text-emerald-600">
+                Developer
+              </p>
+
+              <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+              <div className="mt-32 sm:mt-48 lg:mt-64">
+                <div
+                  className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <p className="text-sm text-white">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+                    perferendis hic asperiores quibusdam quidem voluptates doloremque
+                    reiciendis nostrum harum. Repudiandae?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+
+          
+          <a href="#" className="group relative bg-black">
+            <img
+              alt="Developer"
+              src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+              className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
+            />
+
+            <div className="relative p-4 sm:p-6 lg:p-8">
+              <p className="text-sm font-medium uppercase tracking-widest text-emerald-600">
+                Developer
+              </p>
+
+              <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+              <div className="mt-32 sm:mt-48 lg:mt-64">
+                <div
+                  className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <p className="text-sm text-white">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+                    perferendis hic asperiores quibusdam quidem voluptates doloremque
+                    reiciendis nostrum harum. Repudiandae?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+
+
+          <a href="#" className="group relative bg-black">
+            <img
+              alt="Developer"
+              src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+              className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
+            />
+
+            <div className="relative p-4 sm:p-6 lg:p-8">
+              <p className="text-sm font-medium uppercase tracking-widest text-emerald-600">
+                Developer
+              </p>
+
+              <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+              <div className="mt-32 sm:mt-48 lg:mt-64">
+                <div
+                  className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <p className="text-sm text-white">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+                    perferendis hic asperiores quibusdam quidem voluptates doloremque
+                    reiciendis nostrum harum. Repudiandae?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+
+          <a href="#" className="group relative bg-black">
+            <img
+              alt="Developer"
+              src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+              className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
+            />
+
+            <div className="relative p-4 sm:p-6 lg:p-8">
+              <p className="text-sm font-medium uppercase tracking-widest text-emerald-600">
+                Developer
+              </p>
+
+              <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+              <div className="mt-32 sm:mt-48 lg:mt-64">
+                <div
+                  className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <p className="text-sm text-white">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+                    perferendis hic asperiores quibusdam quidem voluptates doloremque
+                    reiciendis nostrum harum. Repudiandae?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+
+          <a href="#" className="group relative bg-black">
+            <img
+              alt="Developer"
+              src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+              className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
+            />
+
+            <div className="relative p-4 sm:p-6 lg:p-8">
+              <p className="text-sm font-medium uppercase tracking-widest text-emerald-600">
+                Developer
+              </p>
+
+              <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+              <div className="mt-32 sm:mt-48 lg:mt-64">
+                <div
+                  className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <p className="text-sm text-white">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+                    perferendis hic asperiores quibusdam quidem voluptates doloremque
+                    reiciendis nostrum harum. Repudiandae?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+         
+
+
+            </div>
+          </div>
+        </section>
+          </div>}
+
+
+          {activeTab === 1 && 
+        <div>
+          <section>
+          <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+            <div
+              className="[column-fill:_balance] sm:columns-2 sm:gap-6 lg:columns-3 lg:gap-8"
+            >
+              <div className="mb-8 sm:break-inside-avoid">
+                <blockquote className="rounded-xl bg-gray-50 p-6 shadow">
+                  <p class="leading-relaxed text-gray-700">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                    minima dicta amet, molestiae aliquam incidunt suscipit recusandae
+                    labore ratione doloremque, architecto et illo minus quo tenetur
+                    ducimus, voluptatibus repellendus fuga aperiam vel ab! Ipsam
+                    corrupti blanditiis dolorum! Officia assumenda rem nam, eveniet enim
+                    ad inventore laudantium est illum voluptatem quis.
+                  </p>
+                </blockquote>
+
+                <div className="mt-4 flex items-center gap-4">
+                  <img
+                    alt="Woman"
+                    src="https://images.unsplash.com/photo-1603366445787-09714680cbf1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
+                    className="h-12 w-12 rounded-full object-cover"
+                  />
+
+                  <div className="text-sm">
+                    <p className="font-medium">Gladis Lennon</p>
+                    <p className="mt-1">Head of SEO</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mb-8 sm:break-inside-avoid">
+                <blockquote className="rounded-xl bg-gray-50 p-6 shadow">
+                  <p className="leading-relaxed text-gray-700">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore vel
+                    quo deserunt quos expedita minima incidunt sed tempora, a architecto
+                    consectetur reprehenderit, in repellat voluptatum.
+                  </p>
+                </blockquote>
+
+                <div className="mt-4 flex items-center gap-4">
+                  <img
+                    alt="Woman"
+                    src="https://images.unsplash.com/photo-1603366445787-09714680cbf1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
+                    className="h-12 w-12 rounded-full object-cover"
+                  />
+
+                  <div className="text-sm">
+                    <p className="font-medium">Gladis Lennon</p>
+                    <p className="mt-1">Head of SEO</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mb-8 sm:break-inside-avoid">
+                <blockquote className="rounded-xl bg-gray-50 p-6 shadow">
+                  <p className="leading-relaxed text-gray-700">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+                    beatae incidunt perferendis soluta facilis voluptas dicta
+                    repudiandae quasi asperiores libero, exercitationem molestiae autem
+                    sapiente dolore nulla non consequatur. Eaque, dolores.
+                  </p>
+                </blockquote>
+
+                <div className="mt-4 flex items-center gap-4">
+                  <img
+                    alt="Woman"
+                    src="https://images.unsplash.com/photo-1603366445787-09714680cbf1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
+                    className="h-12 w-12 rounded-full object-cover"
+                  />
+
+                  <div className="text-sm">
+                    <p className="font-medium">Gladis Lennon</p>
+                    <p className="mt-1">Head of SEO</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mb-8 sm:break-inside-avoid">
+                <blockquote className="rounded-xl bg-gray-50 p-6 shadow">
+                  <p className="leading-relaxed text-gray-700">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+                    doloribus eius aut unde, dolores accusantium!
+                  </p>
+                </blockquote>
+
+                <div className="mt-4 flex items-center gap-4">
+                  <img
+                    alt="Woman"
+                    src="https://images.unsplash.com/photo-1603366445787-09714680cbf1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
+                    className="h-12 w-12 rounded-full object-cover"
+                  />
+
+                  <div className="text-sm">
+                    <p className="font-medium">Gladis Lennon</p>
+                    <p className="mt-1">Head of SEO</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mb-8 sm:break-inside-avoid">
+                <blockquote className="rounded-xl bg-gray-50 p-6 shadow">
+                  <p className="leading-relaxed text-gray-700">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi a
+                    voluptatum quidem nulla quisquam natus velit provident earum esse,
+                    odio numquam labore recusandae similique sunt.
+                  </p>
+                </blockquote>
+
+                <div className="mt-4 flex items-center gap-4">
+                  <img
+                    alt="Woman"
+                    src="https://images.unsplash.com/photo-1603366445787-09714680cbf1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
+                    className="h-12 w-12 rounded-full object-cover"
+                  />
+
+                  <div className="text-sm">
+                    <p className="font-medium">Gladis Lennon</p>
+                    <p className="mt-1">Head of SEO</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mb-8 sm:break-inside-avoid">
+                <blockquote className="rounded-xl bg-gray-50 p-6 shadow">
+                  <p className="leading-relaxed text-gray-700">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius ut
+                    necessitatibus, repudiandae qui dolor minima.
+                  </p>
+                </blockquote>
+
+                <div className="mt-4 flex items-center gap-4">
+                  <img
+                    alt="Woman"
+                    src="https://images.unsplash.com/photo-1603366445787-09714680cbf1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
+                    className="h-12 w-12 rounded-full object-cover"
+                  />
+
+                  <div className="text-sm">
+                    <p className="font-medium">Gladis Lennon</p>
+                    <p className="mt-1">Head of SEO</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        </div>}
+
+
         </div>
 
 
-        <div className='flex mx-28 pt-16'>
-          <h2 className='text-white font-bold'>
-              Acquired
-          </h2>
-            
           </div>
 
-        <div className="lg:flex mx-auto justify-center">
-          <section>
-            <div className="max-w-screen-xl px-4 py-2 mx-auto sm:py-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-2 gap-8 lg:grid-cols-4 lg:items-stretch">
-                
 
-                    <a href="#" className="bg-gray-100 flex rounded">
-                        <img
-                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80"
-                          alt=""
-                          className="object-cover w-full rounded aspect-square lg:hover:transform lg:hover:-rotate-3 lg:hover:translate-x-2 lg:hover:translate-y-2"
-                        />
-                    </a>
-
-                    <a href="#" className="bg-gray-100 flex rounded">
-                        <img
-                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80"
-                          alt=""
-                          className="object-cover w-full rounded aspect-square lg:hover:transform lg:hover:-rotate-3 lg:hover:translate-x-2 lg:hover:translate-y-2"
-                        />
-                    </a>
-
-                
-              </div>
-            </div>
-          </section>
         </div>
+
+       
 
         </div>
 

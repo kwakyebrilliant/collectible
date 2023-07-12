@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import Navigation from '../components/Navigation'
 
@@ -7,15 +8,12 @@ function Profile() {
         
         <Navigation />
 
-        <div className="pt-32 lg:flex mx-auto justify-center">
+        <div className="pt-32 justify-center">
           <section>
             <div className="max-w-screen-xl px-4 py-2 mx-auto lg:py-12 sm:px-6 lg:px-8">
-                <div className='grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch'>
-
-                    <div>
-                    <span
-                        className="group flex shrink-0 items-center rounded-lg transition"
-                        >
+            <div className='grid grid-cols-2 gap-4 lg:grid-cols-2'>
+                <div>
+                    <span className="group flex shrink-0 items-center rounded-lg transition">
                         <span className="sr-only">Profile Image</span>
                         <img
                             alt="profile"
@@ -25,18 +23,23 @@ function Profile() {
 
                         <p className="ms-2 hidden text-left text-xs sm:block">
                             <strong className="block text-white font-medium">Eric Frusciante</strong>
-
                             <span className="text-gray-500"> eric@frusciante.com </span>
                         </p>
-                        </span>
-
-                    </div>
-
-                    <div>
-
-                    </div>
-                    
+                    </span>
                 </div>
+
+                <div className="flex items-center justify-end"> {/* Add this div and class */}
+                    <a
+                        className="text-center cursor-pointer items-center px-8 py-2 mx-2 text-white bg-transparent border border-white rounded hover:bg-white hover:text-black active:text-white focus:outline-none focus:ring"
+                        type="submit"
+                    >
+                        <span className="text-sm font-medium">
+                            Upload File
+                        </span>
+                    </a>
+                </div>
+            </div>
+
 
 
 

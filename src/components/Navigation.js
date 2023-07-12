@@ -50,7 +50,7 @@ export default function Navigation() {
             </a>
 
             <a
-            href="#"
+            href="/profile"
             className="block shrink-0 rounded-lg bg-white p-2.5 border border-gray-100 shadow-sm hover:bg-transparent hover:text-gray-100 hover:border hover:border-gray-100"
           >
             <span className="sr-only">Prfile</span>
@@ -62,7 +62,7 @@ export default function Navigation() {
         <div className='md:hidden mr-4' onClick={handleClick}>
             {!nav ? <MenuIcon className='w-5 text-white' /> : <div className='flex'>
             <a
-            href="#"
+            href="/profile"
             className="block mx-2 shrink-0 rounded-lg bg-white p-2.5 border border-gray-100 shadow-sm hover:bg-transparent hover:text-gray-100 hover:border hover:border-gray-100"
           >
             <span className="sr-only">Prfile</span>

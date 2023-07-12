@@ -90,10 +90,10 @@ function Profile() {
         </div>
 
 
-        <div className='mx-32'>
+        <div className='lg:mx-28 mx-8 pt-16 lg:pt-0'>
         <label
         for="Search"
-        className="relative block overflow-hidden border-b border-gray-200 bg-transparent pt-3 focus-within:border-blue-600"
+        className="relative lg:w-96 w-full block overflow-hidden border-b border-gray-200 bg-transparent pt-3 focus-within:border-gray-100"
         >
         <input
             type="text"
@@ -110,10 +110,71 @@ function Profile() {
         </label>
         </div>
 
-        <div className="pt-8 lg:flex mx-auto justify-center">
+        <div>
+
+        <div className='flex mx-28 pt-16'>
+          <h2 className='text-white font-bold'>
+              Your Uploads
+          </h2>
+            
+          </div>
+
+        <div className="lg:flex mx-auto justify-center">
           <section>
-            <div className="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-1 gap-8 lg:grid-cols-6 lg:items-stretch">
+            <div className="max-w-screen-xl px-4 py-2 mx-auto sm:py-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-2 gap-8 lg:grid-cols-4 lg:items-stretch">
+                  
+                 
+                      <a href="#" className="bg-gray-100 flex rounded">
+                        <img
+                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80"
+                          alt=""
+                          className="object-cover w-full rounded aspect-square lg:hover:transform lg:hover:-rotate-3 lg:hover:translate-x-2 lg:hover:translate-y-2"
+                        />
+                    </a>
+
+                    <a href="#" className="bg-gray-100 flex rounded">
+                        <img
+                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80"
+                          alt=""
+                          className="object-cover w-full rounded aspect-square lg:hover:transform lg:hover:-rotate-3 lg:hover:translate-x-2 lg:hover:translate-y-2"
+                        />
+                    </a>
+
+                    <a href="#" className="bg-gray-100 flex rounded">
+                        <img
+                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80"
+                          alt=""
+                          className="object-cover w-full rounded aspect-square lg:hover:transform lg:hover:-rotate-3 lg:hover:translate-x-2 lg:hover:translate-y-2"
+                        />
+                    </a>
+
+                    <a href="#" className="bg-gray-100 flex rounded">
+                        <img
+                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80"
+                          alt=""
+                          className="object-cover w-full rounded aspect-square lg:hover:transform lg:hover:-rotate-3 lg:hover:translate-x-2 lg:hover:translate-y-2"
+                        />
+                    </a>
+
+                
+              </div>
+            </div>
+          </section>
+        </div>
+
+
+        <div className='flex mx-28 pt-16'>
+          <h2 className='text-white font-bold'>
+              Acquired
+          </h2>
+            
+          </div>
+
+        <div className="lg:flex mx-auto justify-center">
+          <section>
+            <div className="max-w-screen-xl px-4 py-2 mx-auto sm:py-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-2 gap-8 lg:grid-cols-6 lg:items-stretch">
                   
                  
                       <a href="#" className="bg-gray-100 flex rounded">
@@ -168,6 +229,7 @@ function Profile() {
               </div>
             </div>
           </section>
+        </div>
         </div>
         
     </div>

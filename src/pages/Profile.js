@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation'
 
+import images2 from '../assets/images2.svg';
+
 import {
     FaPlusCircle
   } from "react-icons/fa";
@@ -112,6 +114,20 @@ function Profile() {
 
         <div>
 
+        <div className="relative">
+
+        {/* background image */}
+        <div
+          className="fixed inset-0 z-10"
+          style={{
+            backgroundImage: `url(${images2})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            opacity: 0.1,
+          }}
+        ></div>
+        
+
         <div className='flex mx-28 pt-16'>
           <h2 className='text-white font-bold'>
               Your Uploads
@@ -174,40 +190,8 @@ function Profile() {
         <div className="lg:flex mx-auto justify-center">
           <section>
             <div className="max-w-screen-xl px-4 py-2 mx-auto sm:py-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-2 gap-8 lg:grid-cols-6 lg:items-stretch">
-                  
-                 
-                      <a href="#" className="bg-gray-100 flex rounded">
-                        <img
-                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80"
-                          alt=""
-                          className="object-cover w-full rounded aspect-square lg:hover:transform lg:hover:-rotate-3 lg:hover:translate-x-2 lg:hover:translate-y-2"
-                        />
-                    </a>
-
-                    <a href="#" className="bg-gray-100 flex rounded">
-                        <img
-                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80"
-                          alt=""
-                          className="object-cover w-full rounded aspect-square lg:hover:transform lg:hover:-rotate-3 lg:hover:translate-x-2 lg:hover:translate-y-2"
-                        />
-                    </a>
-
-                    <a href="#" className="bg-gray-100 flex rounded">
-                        <img
-                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80"
-                          alt=""
-                          className="object-cover w-full rounded aspect-square lg:hover:transform lg:hover:-rotate-3 lg:hover:translate-x-2 lg:hover:translate-y-2"
-                        />
-                    </a>
-
-                    <a href="#" className="bg-gray-100 flex rounded">
-                        <img
-                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80"
-                          alt=""
-                          className="object-cover w-full rounded aspect-square lg:hover:transform lg:hover:-rotate-3 lg:hover:translate-x-2 lg:hover:translate-y-2"
-                        />
-                    </a>
+              <div className="grid grid-cols-2 gap-8 lg:grid-cols-4 lg:items-stretch">
+                
 
                     <a href="#" className="bg-gray-100 flex rounded">
                         <img
@@ -230,6 +214,9 @@ function Profile() {
             </div>
           </section>
         </div>
+
+        </div>
+
         </div>
         
     </div>

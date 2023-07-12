@@ -2,6 +2,10 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 
+import {
+    FaPlusCircle
+  } from "react-icons/fa";
+
 function Profile() {
   return (
     <div className='bg-black'>
@@ -30,9 +34,10 @@ function Profile() {
 
                 <div className="flex items-center justify-end"> {/* Add this div and class */}
                     <a
-                        className="text-center cursor-pointer items-center px-8 py-2 mx-2 text-white bg-transparent border border-white rounded hover:bg-white hover:text-black active:text-white focus:outline-none focus:ring"
+                        className="flex text-center cursor-pointer items-center px-8 py-2 mx-2 hover:text-black text-white bg-transparent border border-white rounded hover:bg-white active:text-white focus:outline-none focus:ring"
                         type="submit"
                     >
+                        <FaPlusCircle className="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
                         <span className="text-sm font-medium">
                             Upload File
                         </span>

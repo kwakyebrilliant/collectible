@@ -31,7 +31,7 @@ export default function Navigation() {
           </Link>
         </li>
         <li className='relative group hover:bg-white hover:text-black hover:rounded-lg'>
-            <Link to="/">
+            <Link to="/shop">
             Shop
           </Link>
         </li>
@@ -53,7 +53,7 @@ export default function Navigation() {
             href="/profile"
             className="block shrink-0 rounded-lg bg-white p-2.5 border border-gray-100 shadow-sm hover:bg-transparent hover:text-gray-100 hover:border hover:border-gray-100"
           >
-            <span className="sr-only">Prfile</span>
+            <span className="sr-only">Profile</span>
             <FaUserAlt className='hover:text-gray-100 text-black lg:w-5 lg:h-5' />
           </a>
     
@@ -65,7 +65,7 @@ export default function Navigation() {
             href="/profile"
             className="block mx-2 shrink-0 rounded-lg bg-white p-2.5 border border-gray-100 shadow-sm hover:bg-transparent hover:text-gray-100 hover:border hover:border-gray-100"
           >
-            <span className="sr-only">Prfile</span>
+            <span className="sr-only">Profile</span>
             <FaUserAlt className='hover:text-gray-100 text-black lg:w-5 lg:h-5' />
           </a>
                 <XIcon className='w-5 text-white' /> 
@@ -81,7 +81,7 @@ export default function Navigation() {
               <Link to="/" onClick={handleClose}>Home</Link>
             </li>
             <li className='border-b-2 border-zinc-300 w-full'>
-              <Link to="/" onClick={handleClose}>Shop</Link>
+              <Link to="/shop" onClick={handleClose}>Shop</Link>
             </li>
             <div className='my-4'>
               <a

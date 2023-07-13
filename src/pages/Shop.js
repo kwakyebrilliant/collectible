@@ -22,13 +22,22 @@ function Shop() {
 
       const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleNext = () => {
-    setActiveIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
-  };
+    const handleNext = () => {
+        setActiveIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+    };
 
-  const handlePrev = () => {
-    setActiveIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
-  };
+    const handlePrev = () => {
+        setActiveIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+    };
+
+
+    const [activeTab, setActiveTab] = useState(0);
+
+    const handleTabClick = (index) => {
+      setActiveTab(index);
+    };
+  
+    const tabNames = ['Images', 'Videos'];
 
 
   return (

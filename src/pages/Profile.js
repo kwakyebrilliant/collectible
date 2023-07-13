@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation'
 
+import Try from '../assets/try.avif';
 import images2 from '../assets/images2.svg';
 
 import {

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation'
 
+import profile from '../assets/profile.avif';
 import Try from '../assets/try.avif';
 import images2 from '../assets/images2.svg';
 
@@ -61,7 +62,7 @@ function Profile() {
                         <span className="sr-only">Profile Image</span>
                         <img
                             alt="profile"
-                            src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                            src={profile}
                             className="lg:h-40 lg:w-40 h-20 w-20 rounded-full object-cover"
                         />
 
@@ -364,7 +365,7 @@ function Profile() {
           <a href="#" className="group relative bg-black">
             <img
               alt="Developer"
-              src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+              src={Try}
               className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
             />
 
@@ -394,7 +395,7 @@ function Profile() {
           <a href="#" className="group relative bg-black">
             <img
               alt="Developer"
-              src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+              src={Try}              
               className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
             />
 
@@ -424,7 +425,7 @@ function Profile() {
           <a href="#" className="group relative bg-black">
             <img
               alt="Developer"
-              src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+              src={Try}
               className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
             />
 
@@ -453,7 +454,7 @@ function Profile() {
           <a href="#" className="group relative bg-black">
             <img
               alt="Developer"
-              src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+              src={Try}
               className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
             />
 
@@ -482,7 +483,7 @@ function Profile() {
           <a href="#" className="group relative bg-black">
             <img
               alt="Developer"
-              src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+              src={Try}
               className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
             />
 
@@ -528,7 +529,7 @@ function Profile() {
           <a href="#" className="group relative bg-black">
             <img
               alt="Developer"
-              src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+              src={Try}
               className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
             />
 
@@ -557,7 +558,7 @@ function Profile() {
           <a href="#" className="group relative bg-black">
             <img
               alt="Developer"
-              src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+              src={Try}
               className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
             />
 
@@ -587,7 +588,7 @@ function Profile() {
           <a href="#" className="group relative bg-black">
             <img
               alt="Developer"
-              src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+              src={Try}
               className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
             />
 
@@ -617,7 +618,7 @@ function Profile() {
           <a href="#" className="group relative bg-black">
             <img
               alt="Developer"
-              src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+              src={Try}
               className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
             />
 
@@ -646,7 +647,7 @@ function Profile() {
           <a href="#" className="group relative bg-black">
             <img
               alt="Developer"
-              src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+              src={Try}
               className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
             />
 
@@ -675,7 +676,7 @@ function Profile() {
           <a href="#" className="group relative bg-black">
             <img
               alt="Developer"
-              src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+              src={Try}
               className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
             />
 

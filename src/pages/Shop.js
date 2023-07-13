@@ -30,14 +30,11 @@ function Shop() {
         setActiveIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
     };
 
+    const [selectedOption, setSelectedOption] = useState('image');
 
-    const [activeTab, setActiveTab] = useState(0);
-
-    const handleTabClick = (index) => {
-      setActiveTab(index);
+    const handleOptionSelect = (option) => {
+        setSelectedOption(option);
     };
-  
-    const tabNames = ['Images', 'Videos'];
 
 
   return (
@@ -110,17 +107,23 @@ function Shop() {
 
                 <div className="mt-8 flex items-center justify-between">
                 <div className="flex rounded border border-gray-100">
-                    <a
-                    className="inline-flex cursor-pointer h-10 w-10 items-center justify-center border-e text-gray-600 transition hover:bg-gray-50 hover:text-gray-700"
-                    >
-                    <FaImage className="h-5 w-5" aria-hidden="true" />
-                    </a>
+                <a
+                className={`inline-flex cursor-pointer h-10 w-10 items-center justify-center border-e text-gray-600 transition hover:bg-gray-50 hover:text-gray-700 ${
+                selectedOption === 'image' ? 'bg-gray-50 text-gray-700' : ''
+                }`}
+                onClick={() => handleOptionSelect('image')}
+            >
+                <FaImage className="h-5 w-5" aria-hidden="true" />
+            </a>
 
-                    <a
-                    className="inline-flex cursor-pointer h-10 w-10 items-center justify-center border-e text-gray-600 transition hover:bg-gray-50 hover:text-gray-700"
-                    >
-                    <FaVideo className="h-5 w-5" aria-hidden="true" />
-                    </a>
+            <a
+                className={`inline-flex cursor-pointer h-10 w-10 items-center justify-center border-e text-gray-600 transition hover:bg-gray-50 hover:text-gray-700 ${
+                selectedOption === 'video' ? 'bg-gray-50 text-gray-700' : ''
+                }`}
+                onClick={() => handleOptionSelect('video')}
+            >
+                <FaVideo className="h-5 w-5" aria-hidden="true" />
+            </a>
                 </div>
 
                 <div>
@@ -144,6 +147,7 @@ function Shop() {
                 </div>
                 </div>
 
+                {selectedOption === 'image' && <div>
                 <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 <li>
                 <a href="#" className="group relative bg-black">
@@ -266,6 +270,75 @@ function Shop() {
                 </li>
                 
                 </ul>
+               </div>}
+
+               {selectedOption === 'video' && <div>
+                <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                <li>
+                <a href="#" className="group relative bg-black">
+                    <img
+                    alt="Developer"
+                    src={Try}
+                    className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
+                    />
+
+                    <div className="relative p-4 sm:p-6 lg:p-8">
+                    <p className="text-sm font-medium uppercase tracking-widest text-emerald-600">
+                        Developer
+                    </p>
+
+                    <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+                    <div className="mt-32 sm:mt-48 lg:mt-64">
+                        <div
+                        className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                        >
+                        <p className="text-sm text-white">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+                            perferendis hic asperiores quibusdam quidem voluptates doloremque
+                            reiciendis nostrum harum. Repudiandae?
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </a>
+                </li>
+
+                <li>
+                <a href="#" className="group relative bg-black">
+                    <img
+                    alt="Developer"
+                    src={Try}
+                    className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
+                    />
+
+                    <div className="relative p-4 sm:p-6 lg:p-8">
+                    <p className="text-sm font-medium uppercase tracking-widest text-emerald-600">
+                        Developer
+                    </p>
+
+                    <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+                    <div className="mt-32 sm:mt-48 lg:mt-64">
+                        <div
+                        className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                        >
+                        <p className="text-sm text-white">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+                            perferendis hic asperiores quibusdam quidem voluptates doloremque
+                            reiciendis nostrum harum. Repudiandae?
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </a>
+                </li>
+
+                
+                
+                </ul>
+               </div>}
+
             </div>
             </section>
 

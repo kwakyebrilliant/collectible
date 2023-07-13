@@ -175,7 +175,7 @@ function Home() {
                       <li
                         key={index}
                         className={`px-3 py-1 mx-0.5 cursor-pointer rounded-full ${
-                          currentPage === index + 1 ? 'bg-emerald-500 text-white' : 'bg-gray-300 text-gray-700'
+                          currentPage === index + 1 ? 'bg-emerald-500 text-white hover:bg-transparent hover:text-emerald-500' : 'bg-gray-300 text-gray-700 hover:bg-transparent hover:text-white'
                         }`}
                         onClick={() => paginate(index + 1)}
                       >

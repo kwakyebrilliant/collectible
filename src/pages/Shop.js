@@ -1,8 +1,17 @@
 import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer';
 
 function Shop() {
   return (
-    <div>Shop</div>
+    <div className='bg-black'>
+
+        <Navigation />
+
+        Shop
+        
+        <Footer />
+    </div>
   )
 }
 

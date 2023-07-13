@@ -1,14 +1,22 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
 import '../utils/animations.css'
 import Try from '../assets/try.avif'
 import profile from '../assets/profile.avif'
+import images2 from '../assets/images2.svg';
 
 function Home() {
   return (
-    <div className='bg-black'>
+    <div className='bg-black' 
+    style={{ 
+    backgroundImage: `url(${images2})`, 
+    backgroundSize: 'cover',
+    backgroundPosition: 'center'
+    }}
+    >
         
         <Navigation />
         
@@ -67,8 +75,149 @@ function Home() {
           </section>
         </div>
 
+        <section>
+          <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+            <header>
+                <h2 className="text-xl font-bold text-gray-100 sm:text-3xl">
+                    New Collectibles
+                </h2>
+
+                <p className="mt-4 max-w-md text-gray-500">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque
+                    praesentium cumque iure dicta incidunt est ipsam, officia dolor fugit
+                    natus?
+                </p>
+              </header>
 
 
+              <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                <li>
+                <a href="#" className="group relative bg-black">
+                    <img
+                    alt="Developer"
+                    src={Try}
+                    className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
+                    />
+
+                    <div className="relative p-4 sm:p-6 lg:p-8">
+                    <p className="text-sm font-medium uppercase tracking-widest text-emerald-600">
+                        Developer
+                    </p>
+
+                    <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+                    <div className="mt-32 sm:mt-48 lg:mt-64">
+                        <div
+                        className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                        >
+                        <p className="text-sm text-white">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+                            perferendis hic asperiores quibusdam quidem voluptates doloremque
+                            reiciendis nostrum harum. Repudiandae?
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </a>
+                </li>
+
+                <li>
+                <a href="#" className="group relative bg-black">
+                    <img
+                    alt="Developer"
+                    src={Try}
+                    className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
+                    />
+
+                    <div className="relative p-4 sm:p-6 lg:p-8">
+                    <p className="text-sm font-medium uppercase tracking-widest text-emerald-600">
+                        Developer
+                    </p>
+
+                    <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+                    <div className="mt-32 sm:mt-48 lg:mt-64">
+                        <div
+                        className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                        >
+                        <p className="text-sm text-white">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+                            perferendis hic asperiores quibusdam quidem voluptates doloremque
+                            reiciendis nostrum harum. Repudiandae?
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </a>
+                </li>
+
+                <li>
+                <a href="#" className="group relative bg-black">
+                    <img
+                    alt="Developer"
+                    src={Try}
+                    className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
+                    />
+
+                    <div className="relative p-4 sm:p-6 lg:p-8">
+                    <p className="text-sm font-medium uppercase tracking-widest text-emerald-600">
+                        Developer
+                    </p>
+
+                    <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+                    <div className="mt-32 sm:mt-48 lg:mt-64">
+                        <div
+                        className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                        >
+                        <p className="text-sm text-white">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+                            perferendis hic asperiores quibusdam quidem voluptates doloremque
+                            reiciendis nostrum harum. Repudiandae?
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </a>
+                </li>
+
+                <li>
+                <a href="#" className="group relative bg-black">
+                    <img
+                    alt="Developer"
+                    src={Try}
+                    className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
+                    />
+
+                    <div className="relative p-4 sm:p-6 lg:p-8">
+                    <p className="text-sm font-medium uppercase tracking-widest text-emerald-600">
+                        Developer
+                    </p>
+
+                    <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+                    <div className="mt-32 sm:mt-48 lg:mt-64">
+                        <div
+                        className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                        >
+                        <p className="text-sm text-white">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+                            perferendis hic asperiores quibusdam quidem voluptates doloremque
+                            reiciendis nostrum harum. Repudiandae?
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </a>
+                </li>
+                
+                </ul>
+
+          </div>
+        </section>
+
+
+      <Footer />
 
     </div>
   )

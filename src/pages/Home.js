@@ -3,6 +3,8 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 
 import '../utils/animations.css'
+import Try from '../assets/try.avif'
+import profile from '../assets/profile.avif'
 
 function Home() {
   return (
@@ -18,7 +20,7 @@ function Home() {
 
               <a href="#" className="bg-gray-100 flex rounded">
                 <img
-                  src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80"
+                  src={Try}
                   alt=""
                   className="grid object-cover w-full aspect-square rounded place-content-center lg:hover:transform lg:hover:-rotate-3 lg:hover:translate-x-2 lg:hover:translate-y-2"
                 />
@@ -43,8 +45,8 @@ function Home() {
                     <li>
                       <a href="#" className="bg-gray-100 flex rounded">
                         <img
-                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80"
-                          alt=""
+                         src={profile}
+                         alt=""
                           className="object-cover w-full rounded aspect-square lg:hover:transform lg:hover:-rotate-3 lg:hover:translate-x-2 lg:hover:translate-y-2"
                         />
 

@@ -46,11 +46,13 @@ function Shop() {
             <div className="w-full max-w-7xl">
                 <div className="relative">
                 <div className="overflow-hidden rounded-lg">
+                    <a href='/single'>
                     <img
                     src={images[activeIndex]}
                     alt="Carousel Item"
                     className="object-cover w-full h-64 md:h-96"
                     />
+                    </a>
                 </div>
                 <a
                     onClick={handlePrev}
@@ -150,7 +152,7 @@ function Shop() {
                 {selectedOption === 'image' && <div>
                 <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 <li>
-                <a href="#" className="group relative bg-black">
+                <a href="/single" className="group relative bg-black">
                     <img
                     alt="Developer"
                     src={Try}
@@ -180,7 +182,7 @@ function Shop() {
                 </li>
 
                 <li>
-                <a href="#" className="group relative bg-black">
+                <a href="/single" className="group relative bg-black">
                     <img
                     alt="Developer"
                     src={Try}
@@ -210,7 +212,7 @@ function Shop() {
                 </li>
 
                 <li>
-                <a href="#" className="group relative bg-black">
+                <a href="/single" className="group relative bg-black">
                     <img
                     alt="Developer"
                     src={Try}
@@ -240,7 +242,7 @@ function Shop() {
                 </li>
 
                 <li>
-                <a href="#" className="group relative bg-black">
+                <a href="/single" className="group relative bg-black">
                     <img
                     alt="Developer"
                     src={Try}
@@ -275,7 +277,7 @@ function Shop() {
                {selectedOption === 'video' && <div>
                 <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 <li>
-                <a href="#" className="group relative bg-black">
+                <a href="/single" className="group relative bg-black">
                     <img
                     alt="Developer"
                     src={Try}
@@ -305,7 +307,7 @@ function Shop() {
                 </li>
 
                 <li>
-                <a href="#" className="group relative bg-black">
+                <a href="/single" className="group relative bg-black">
                     <img
                     alt="Developer"
                     src={Try}

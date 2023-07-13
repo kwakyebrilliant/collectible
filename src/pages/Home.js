@@ -72,7 +72,7 @@ function Home() {
             <div className="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">
 
-              <a href="#" className="bg-gray-100 flex rounded">
+              <a href="/single" className="bg-gray-100 flex rounded">
                 <img
                   src={Try}
                   alt=""
@@ -85,7 +85,7 @@ function Home() {
                 <div className="lg:col-span-2 lg:py-8">
                   <ul className="grid grid-cols-2 gap-4">
                     <li>
-                      <a href="#" className="bg-gray-100 flex rounded">
+                      <a href="/single" className="bg-gray-100 flex rounded">
                         <img
                           src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80"
                           alt=""
@@ -97,7 +97,7 @@ function Home() {
                     </li>
 
                     <li>
-                      <a href="#" className="bg-gray-100 flex rounded">
+                      <a href="/single" className="bg-gray-100 flex rounded">
                         <img
                          src={profile}
                          alt=""
@@ -139,7 +139,7 @@ function Home() {
               <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {currentItems.map((item) => (
                   <li key={item.id}>
-                    <a href="#" className="group relative bg-black">
+                    <a href="/single" className="group relative bg-black">
                     <img
                             alt="Developer"
                             src={item.media}

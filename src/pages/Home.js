@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
+import React, {useState} from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
@@ -9,6 +9,52 @@ import profile from '../assets/profile.avif'
 import images2 from '../assets/images2.svg';
 
 function Home() {
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 4; // Number of items to display per page
+
+  // Your data array with actual items
+  const data = [
+    {
+      id: 1,
+      title: 'Item 1',
+      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque praesentium cumque iure dicta incidunt est ipsam, officia dolor fugitnatus?',
+      media: Try,
+    },
+    {
+      id: 2,
+      title: 'Item 2',
+      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque praesentium cumque iure dicta incidunt est ipsam, officia dolor fugitnatus?',
+      media: profile,
+    },
+    {
+      id: 3,
+      title: 'Item 3',
+      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque praesentium cumque iure dicta incidunt est ipsam, officia dolor fugitnatus?',
+      media: Try,
+    },
+    {
+      id: 4,
+      title: 'Item 4',
+      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque praesentium cumque iure dicta incidunt est ipsam, officia dolor fugitnatus?',
+      media: profile,
+    },
+    {
+      id: 5,
+      title: 'Item 5',
+      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque praesentium cumque iure dicta incidunt est ipsam, officia dolor fugitnatus?',
+      media: Try,
+    },
+  ];
+
+  // Calculate the index range of items to display on the current page
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
+
+  // Change the current page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <div className='bg-black' 
     style={{ 
@@ -89,129 +135,57 @@ function Home() {
                 </p>
               </header>
 
-
+              <div className="bg-black shadow-lg shadow-gray-700 rounded-md h-full">
               <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                <li>
-                <a href="#" className="group relative bg-black">
+                {currentItems.map((item) => (
+                  <li key={item.id}>
+                    <a href="#" className="group relative bg-black">
                     <img
-                    alt="Developer"
-                    src={Try}
-                    className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
-                    />
+                            alt="Developer"
+                            src={item.media}
+                            className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
+                            />
 
-                    <div className="relative p-4 sm:p-6 lg:p-8">
-                    <p className="text-sm font-medium uppercase tracking-widest text-emerald-600">
-                        Developer
-                    </p>
+                            <div className="relative p-4 sm:p-6 lg:p-8">
+                            <p className="text-sm font-medium uppercase tracking-widest text-emerald-600">
+                                {item.title}
+                            </p>
 
-                    <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+                            <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
 
-                    <div className="mt-32 sm:mt-48 lg:mt-64">
-                        <div
-                        className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
-                        >
-                        <p className="text-sm text-white">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
-                            perferendis hic asperiores quibusdam quidem voluptates doloremque
-                            reiciendis nostrum harum. Repudiandae?
-                        </p>
-                        </div>
-                    </div>
-                    </div>
-                </a>
-                </li>
+                            <div className="mt-32 sm:mt-48 lg:mt-64">
+                                <div
+                                className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                                >
+                                <p className="text-sm text-white">
+                                    {item.description}
+                                </p>
+                                </div>
+                            </div>
+                            </div>
+                    </a>
+                  </li>
+                ))}
+              </ul>
 
-                <li>
-                <a href="#" className="group relative bg-black">
-                    <img
-                    alt="Developer"
-                    src={Try}
-                    className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
-                    />
-
-                    <div className="relative p-4 sm:p-6 lg:p-8">
-                    <p className="text-sm font-medium uppercase tracking-widest text-emerald-600">
-                        Developer
-                    </p>
-
-                    <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
-
-                    <div className="mt-32 sm:mt-48 lg:mt-64">
-                        <div
-                        className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
-                        >
-                        <p className="text-sm text-white">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
-                            perferendis hic asperiores quibusdam quidem voluptates doloremque
-                            reiciendis nostrum harum. Repudiandae?
-                        </p>
-                        </div>
-                    </div>
-                    </div>
-                </a>
-                </li>
-
-                <li>
-                <a href="#" className="group relative bg-black">
-                    <img
-                    alt="Developer"
-                    src={Try}
-                    className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
-                    />
-
-                    <div className="relative p-4 sm:p-6 lg:p-8">
-                    <p className="text-sm font-medium uppercase tracking-widest text-emerald-600">
-                        Developer
-                    </p>
-
-                    <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
-
-                    <div className="mt-32 sm:mt-48 lg:mt-64">
-                        <div
-                        className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
-                        >
-                        <p className="text-sm text-white">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
-                            perferendis hic asperiores quibusdam quidem voluptates doloremque
-                            reiciendis nostrum harum. Repudiandae?
-                        </p>
-                        </div>
-                    </div>
-                    </div>
-                </a>
-                </li>
-
-                <li>
-                <a href="#" className="group relative bg-black">
-                    <img
-                    alt="Developer"
-                    src={Try}
-                    className="absolute rounded-lg inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 pb-8"
-                    />
-
-                    <div className="relative p-4 sm:p-6 lg:p-8">
-                    <p className="text-sm font-medium uppercase tracking-widest text-emerald-600">
-                        Developer
-                    </p>
-
-                    <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
-
-                    <div className="mt-32 sm:mt-48 lg:mt-64">
-                        <div
-                        className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
-                        >
-                        <p className="text-sm text-white">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
-                            perferendis hic asperiores quibusdam quidem voluptates doloremque
-                            reiciendis nostrum harum. Repudiandae?
-                        </p>
-                        </div>
-                    </div>
-                    </div>
-                </a>
-                </li>
-                
-                </ul>
+              <div className="flex justify-end">
+                {data.length > itemsPerPage && (
+                  <ul className="pagination flex m-4">
+                    {Array.from({ length: Math.ceil(data.length / itemsPerPage) }).map((_, index) => (
+                      <li
+                        key={index}
+                        className={`px-3 py-1 mx-0.5 cursor-pointer rounded-full ${
+                          currentPage === index + 1 ? 'bg-emerald-500 text-white' : 'bg-gray-300 text-gray-700'
+                        }`}
+                        onClick={() => paginate(index + 1)}
+                      >
+                        {index + 1}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </div>
 
           </div>
         </section>

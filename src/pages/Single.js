@@ -166,7 +166,7 @@ function Single() {
                         type="number"
                         id="newprice"
                         placeholder="New price"
-                        className="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none sm:text-sm"
+                        className="peer h-8 w-full text-gray-100 border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none sm:text-sm"
                     />
 
                     <span
@@ -194,8 +194,12 @@ function Single() {
                 <h2 className="text-xl font-bold text-gray-100 sm:text-3xl">
                     History
                 </h2>
+                </div>
+            </div>
+            
+            </div>
 
-                <div className="overflow-x-auto mb-16 mt-2 bg-black shadow-lg shadow-gray-700 rounded-md">
+            <div className="overflow-x-auto lg:max-w-4xl mb-16 mt-2 bg-black shadow-lg shadow-gray-700 rounded-md">
                 <table className="min-w-full overflow-x-auto divide-y-2 divide-gray-100 text-sm">
                 <thead className="ltr:text-left overflow-x-auto bg-gray-50 rtl:text-right">
                 <tr>
@@ -228,10 +232,6 @@ function Single() {
                 
                 </tbody>
             </table>
-            </div>
-
-                </div>
-            </div>
             </div>
         </div>
         </section>

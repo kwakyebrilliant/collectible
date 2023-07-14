@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
+import React, {useState} from 'react'
 import { FaArrowCircleLeft } from 'react-icons/fa'
 import Footer from '../components/Footer';
 
 import Try from '../assets/try.avif';
 import profile from '../assets/profile.avif';
+import logo from '../assets/logo.png'
 
 function Single() {
 
@@ -12,18 +13,22 @@ function Single() {
         window.history.back();
       };
 
+    const [resell, setResell] = useState(false);
+
   return (
     <div className='bg-black p-8'>
 
        
             {/* navigate back icon */}
-        <div>
+        <div className='flex'>
             <a 
             onClick={handleGoBack}
             className="inline-block cursor-pointer rounded-full border border-emerald-600 bg-emerald-600 p-3 text-white hover:bg-transparent hover:text-emerald-600 focus:outline-none focus:ring active:text-emerald-500">
 
             <FaArrowCircleLeft className='lg:w-5 lg:h-5' />
             </a>
+            <img src={logo} alt='logo' className='text-white h-8 w-8 lg:w-[35px] lg:h-[35px]' />
+            <h1 className='text-3xl font-bold text-white mr-4 sm:text-4xl'>Collectibles.</h1>
         </div>
 
         <section>
@@ -39,7 +44,11 @@ function Single() {
                 />
                 </div>
 
-                <ul className="mt-1 flex gap-1">
+                <h2 className="text-sm mt-4 mx-4 font-bold text-gray-100">
+                    Similar Collectibles
+                </h2>
+
+                <ul className="flex gap-1">
                 <li>
                     <img
                     alt="Tee"
@@ -93,9 +102,9 @@ function Single() {
                 </div>
 
                 <fieldset>
+                <legend className="text-lg font-bold text-gray-100">Title</legend>
 
                     <div className="mt-2 flex flex-wrap gap-2">
-                    <legend className="text-lg font-bold text-gray-100">Title</legend>
 
                     <label for="material_wool" className="cursor-pointer">
                         <span
@@ -117,29 +126,110 @@ function Single() {
                     </p>
                 </div>
 
-                <div>
-                    <p className="text-xl text-gray-100 font-bold">$19.99</p>
+                <div className='flex'>
+                    <p className="font-bold text-base bg-white p-2 rounded-e-full text-black">$19.99</p>
                 </div>
 
                 <a
                     type="submit"
-                    className="w-full cursor-pointer rounded bg-gray-100 hover:bg-transparent hover:text-gray-100 hover:border hover:border-gray-100 px-6 justify-center flex py-3 text-sm font-bold uppercase tracking-wide text-black"
+                    className="w-full border border-gray-200 cursor-pointer rounded bg-gray-100 hover:bg-transparent hover:text-gray-100 hover:border hover:border-gray-100 px-6 justify-center flex py-3 text-sm font-bold uppercase tracking-wide text-black"
                 >
                     Buy Collectible
                 </a>
+
+                {resell ? (
+                           <a
+                           type="submit"
+                           onClick={() => setResell(!resell)}
+                           className="w-full border border-gray-200 cursor-pointer rounded bg-gray-100 hover:bg-transparent hover:text-gray-100 hover:border hover:border-gray-100 px-6 justify-center flex py-3 text-sm font-bold uppercase tracking-wide text-black"
+                       >
+                           Cancel Resell
+                       </a>
+                        ) : (
+                            <a
+                            type="submit"
+                            onClick={() => setResell(!resell)}
+                            className="w-full border border-gray-200 cursor-pointer rounded bg-gray-100 hover:bg-transparent hover:text-gray-100 hover:border hover:border-gray-100 px-6 justify-center flex py-3 text-sm font-bold uppercase tracking-wide text-black"
+                        >
+                            Resell Collectible
+                        </a>
+                            )
+                }
+
+                {resell &&
+                <div>
+                <label
+                    for="newprice"
+                    className="relative w-full block overflow-hidden border-b border-gray-200 bg-transparent pt-3 focus-within:border-gray-100"
+                    >
+                    <input
+                        type="number"
+                        id="newprice"
+                        placeholder="New price"
+                        className="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none sm:text-sm"
+                    />
+
+                    <span
+                        className="absolute start-0 top-2 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs"
+                    >
+                        New Price
+                    </span>
+                    </label>
+
+                    <a
+                    type="submit"
+                    className="w-full mt-4 border border-gray-200 cursor-pointer rounded bg-gray-100 hover:bg-transparent hover:text-gray-100 hover:border hover:border-gray-100 px-6 justify-center flex py-3 text-sm font-bold uppercase tracking-wide text-black"
+                >
+                    Submit New Price
+                </a>
+                </div>
+                }
+
                 </form>
             </div>
-
+                    
             <div className="lg:col-span-3">
                 <div className="prose max-w-2xl">
-                <p className='text-gray-100'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam totam
-                    eos iusto repellat blanditiis voluptate aspernatur, quae nemo
-                    exercitationem cum debitis! Sint consectetur laborum tempora
-                    repellat odit. Impedit quasi reprehenderit harum illum sequi
-                    provident soluta cum quisquam odit possimus? Officia illum saepe
-                    magnam nostrum, officiis placeat iure itaque cumque voluptate?
-                </p>
+
+                <h2 className="text-xl font-bold text-gray-100 sm:text-3xl">
+                    History
+                </h2>
+
+                <div className="overflow-x-auto mb-16 mt-2 bg-black shadow-lg shadow-gray-700 rounded-md">
+                <table className="min-w-full overflow-x-auto divide-y-2 divide-gray-100 text-sm">
+                <thead className="ltr:text-left overflow-x-auto bg-gray-50 rtl:text-right">
+                <tr>
+                    <th className="whitespace-nowrap p-2 text-sm text-gray-400">
+                    PREVIOUS OWNERS
+                    </th>
+                    <th className="whitespace-nowrap p-2 text-sm text-gray-400">
+                    OLD PRICE
+                    </th>
+                    <th className="whitespace-nowrap p-2 ext-sm text-gray-400">
+                    NEW PRICE
+                    </th>
+                    <th className="whitespace-nowrap p-2 text-sm text-gray-400">
+                    DATE ACQUIRED
+                    </th>
+                </tr>
+                </thead>
+
+                <tbody className="divide-y divide-gray-100">
+                <tr style={{height: 50}}>
+                    <td className="whitespace-nowrap px-4 py-2 text-lg font-medium text-center text-gray-400">
+                    0xF...y6b
+                    </td>
+                    <td className="whitespace-nowrap px-4 text-lg text-center text-gray-400">$15.99</td>
+                    <td className="whitespace-nowrap px-4 text-lg text-center text-gray-400">$19.99</td>
+                    <td className="whitespace-nowrap px-4 text-lg text-center text-gray-400">24/05/1995</td>
+                </tr>
+
+
+                
+                </tbody>
+            </table>
+            </div>
+
                 </div>
             </div>
             </div>

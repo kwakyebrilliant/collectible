@@ -3,7 +3,8 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import { FaLinode, FaUserAlt } from 'react-icons/fa'
+import { FaUserAlt } from 'react-icons/fa'
+import logo from '../assets/logo.png'
 
 export default function Navigation() {
     const [nav, setNav] = useState(false)
@@ -22,7 +23,7 @@ export default function Navigation() {
         <div className='w-screen bg-black h-[70px] z-10 fixed drop-shadow-lg'>
       <div className='px-2 flex justify-between items-center w-full h-full'>
       <div className='flex items-center'>
-      <FaLinode className='text-white lg:w-[35px] lg:h-[35px]' />
+      <img src={logo} alt='logo' className='text-white h-8 w-8 lg:w-[35px] lg:h-[35px]' />
       <h1 className='text-3xl font-bold text-white mr-4 sm:text-4xl'>Collectibles.</h1>
       <ul className='hidden text-white md:flex'>
         <li className='hover:bg-white hover:text-black hover:rounded-lg'>

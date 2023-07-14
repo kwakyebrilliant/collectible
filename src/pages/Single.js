@@ -7,6 +7,8 @@ import Try from '../assets/try.avif';
 import profile from '../assets/profile.avif';
 import logo from '../assets/logo.png'
 
+
+
 function Single() {
 
     const handleGoBack = () => {

@@ -7,7 +7,7 @@ import Try from '../assets/try.avif';
 import profile from '../assets/profile.avif';
 import logo from '../assets/logo.png'
 
-
+import ReactModal from 'react-modal';
 
 function Single() {
 
@@ -16,6 +16,40 @@ function Single() {
       };
 
     const [resell, setResell] = useState(false);
+
+    const customStyles = {
+        overlay: {
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.75)',
+          zIndex: 9999,
+        },
+        content: {
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          border: 'none',
+          background: 'rgba(0, 0, 0, 0.75)',
+          overflow: 'auto',
+          WebkitOverflowScrolling: 'touch',
+          borderRadius: 0,
+          outline: 'none',
+          padding: 0,
+        },
+      };
+    
+
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    const closeModal = () => {
+        // Close the modal and perform any additional actions
+        setModalIsOpen(false);
+      };
 
   return (
     <div className='bg-black p-8'>
@@ -33,6 +67,21 @@ function Single() {
             <h1 className='text-3xl font-bold text-white mr-4 sm:text-4xl'>Collectibles.</h1>
         </div>
 
+         {/* modal starts here */}
+         <ReactModal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                style={customStyles}
+            >
+                <button className='bg-gray-100 text-black hover:bg-transparent hover:text-white m-4 px-2' onClick={closeModal}>X</button>
+                <img
+                    alt="Tee"
+                    src={Try}
+                    className="w-full h-auto lg:h-screen object-contain"
+                />
+
+        </ReactModal>
+
         <section>
         <div className="relative mx-auto max-w-screen-xl px-4">
 
@@ -43,6 +92,7 @@ function Single() {
                     alt="Tee"
                     src={Try}
                     className="aspect-square w-full rounded-xl object-cover lg:h-[540px]"
+                    onClick={() => setModalIsOpen(true)}
                 />
                 </div>
 

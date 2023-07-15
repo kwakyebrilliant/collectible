@@ -53,7 +53,6 @@ function Single() {
 
   return (
     <div className='bg-black p-8'>
-
        
             {/* navigate back icon */}
         <div className='flex'>

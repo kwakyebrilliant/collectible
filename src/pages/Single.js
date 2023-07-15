@@ -69,16 +69,16 @@ function Single() {
 
          {/* modal starts here */}
          <ReactModal
-                isOpen={modalIsOpen}
-                onRequestClose={closeModal}
-                style={customStyles}
-            >
-                <button className='bg-gray-100 text-black hover:bg-transparent hover:text-white m-4 px-2' onClick={closeModal}>X</button>
-                <img
-                    alt="Tee"
-                    src={Try}
-                    className="w-full h-auto lg:h-screen object-contain"
-                />
+            isOpen={modalIsOpen}
+            onRequestClose={closeModal}
+            style={customStyles}
+        >
+            <button className='bg-gray-100 text-black hover:bg-transparent hover:text-white m-4 px-2' onClick={closeModal}>X</button>
+            <img
+                alt="Tee"
+                src={Try}
+                className="w-full h-auto lg:h-screen object-contain"
+            />
 
         </ReactModal>
 

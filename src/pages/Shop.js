@@ -56,7 +56,7 @@ function Shop() {
 
         <Navigation />
 
-        <div className="flex lg:pt-32 pt-8 items-center justify-center">
+        <div className="flex lg:pt-32 pt-20 items-center justify-center">
             <div className="w-full max-w-7xl">
                 <div className="relative">
                 <div className="overflow-hidden rounded-lg">

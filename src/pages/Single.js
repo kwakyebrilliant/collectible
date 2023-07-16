@@ -82,7 +82,7 @@ function Single() {
         </ReactModal>
 
         <section>
-        <div className="relative mx-auto max-w-screen-xl px-4">
+        <div className="relative pt-8 mx-auto max-w-screen-xl px-4">
 
             <div className="grid gap-8 lg:grid-cols-4 lg:items-start">
             <div className="lg:col-span-3">

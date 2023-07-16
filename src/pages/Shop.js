@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer';
 
@@ -21,20 +21,34 @@ function Shop() {
       ];
 
       const [activeIndex, setActiveIndex] = useState(0);
-
-    const handleNext = () => {
-        setActiveIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
-    };
-
-    const handlePrev = () => {
-        setActiveIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
-    };
-
-    const [selectedOption, setSelectedOption] = useState('image');
-
-    const handleOptionSelect = (option) => {
+      const [selectedOption, setSelectedOption] = useState('image');
+    
+      const handleNext = () => {
+        setActiveIndex((prevIndex) =>
+          prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        );
+      };
+    
+      const handlePrev = () => {
+        setActiveIndex((prevIndex) =>
+          prevIndex === 0 ? images.length - 1 : prevIndex - 1
+        );
+      };
+    
+      const handleOptionSelect = (option) => {
         setSelectedOption(option);
-    };
+      };
+    
+      useEffect(() => {
+        const interval = setInterval(() => {
+          setActiveIndex((prevIndex) =>
+            prevIndex === images.length - 1 ? 0 : prevIndex + 1
+          );
+        }, 10000);
+    
+        return () => clearInterval(interval);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      }, []);
 
 
   return (

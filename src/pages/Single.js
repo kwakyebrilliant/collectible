@@ -278,8 +278,6 @@ function Single() {
                     <td className="whitespace-nowrap px-4 text-lg text-center text-gray-400">$19.99</td>
                     <td className="whitespace-nowrap px-4 text-lg text-center text-gray-400">24/05/1995</td>
                 </tr>
-
-
                 
                 </tbody>
             </table>

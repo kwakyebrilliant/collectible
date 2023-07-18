@@ -4,6 +4,7 @@ import logo from '../assets/logo.png'
 function Footer() {
   return (
     <div>
+        {/* Footer starts here */}
         <footer className="bg-black">
             <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
                 <div className="sm:flex sm:items-center sm:justify-between">
@@ -18,6 +19,7 @@ function Footer() {
                 </div>
             </div>
         </footer>
+        {/* Footer ends here */}
     </div>
   )
 }

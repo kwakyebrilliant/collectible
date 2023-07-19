@@ -260,7 +260,6 @@ function Profile() {
           </section>
         </div>
 
-
         <div className='lg:mx-28 mx-8 pt-4 lg:pt-0'>
         <label
         for="Search"

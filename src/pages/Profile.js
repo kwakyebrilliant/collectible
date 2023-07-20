@@ -478,7 +478,6 @@ function Profile() {
             </div>
           </a>
 
-
           <a href="#" className="group relative bg-black">
             <img
               alt="Developer"

@@ -506,12 +506,10 @@ function Profile() {
             </div>
           </a>
 
-
             </div>
           </div>
         </section>
           </div>}
-
 
           {activeTab === 1 && 
         <div>

@@ -506,8 +506,6 @@ function Profile() {
             </div>
           </a>
 
-         
-
 
             </div>
           </div>

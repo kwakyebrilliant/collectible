@@ -665,15 +665,12 @@ function Profile() {
             </div>
           </a>
 
-
             </div>
           </div>
         </section>
         </div>}
 
-
         </div>
-
 
           </div>
 

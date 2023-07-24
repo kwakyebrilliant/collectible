@@ -66,7 +66,6 @@ function Home() {
         
         <Navigation />
         
-
         <div className="lg:pt-32 pt-12 lg:flex mx-auto justify-center">
           <section>
             <div className="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
@@ -78,9 +77,7 @@ function Home() {
                   alt=""
                   className="grid object-cover w-full aspect-square rounded place-content-center lg:hover:transform lg:hover:-rotate-3 lg:hover:translate-x-2 lg:hover:translate-y-2"
                 />
-              </a>
-
-                  
+              </a> 
 
                 <div className="lg:col-span-2 lg:py-8">
                   <ul className="grid grid-cols-2 gap-4">

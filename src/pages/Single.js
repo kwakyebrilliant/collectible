@@ -285,7 +285,6 @@ function Single() {
         </div>
         </section>
 
-
         <Footer />
 
     </div>

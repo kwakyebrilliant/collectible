@@ -75,7 +75,6 @@ export default function Navigation() {
         </div>
       </div>
 
-
       {/* Navigation links on small screen */}
       <ul className={!nav ? 'hidden' : 'absolute bg-zinc-200 w-full px-8'}>
             <li className='border-b-2 border-zinc-300 w-full'>

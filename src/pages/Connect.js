@@ -73,7 +73,6 @@ function Connect() {
                     </a>
                 </li>
 
-               
             </ul>
         </article>
 

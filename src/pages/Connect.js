@@ -1,10 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+import React, {useState} from 'react';
 import { FaArrowCircleLeft } from 'react-icons/fa';
 
 import logo from '../assets/logo.png'
 
 function Connect() {
+
+    const [identityname, setIdentityName] = useState('');
 
     const handleGoBack = () => {
         window.history.back();
@@ -34,7 +36,7 @@ function Connect() {
                 />
 
                 <div>
-                <h3 className="text-lg font-medium text-white">Identity Name</h3>
+                <h3 className="text-lg font-medium text-white">{identityname}</h3>
                 </div>
             </div>
 
@@ -52,13 +54,15 @@ function Connect() {
                         type="text"
                         id="identityname"
                         className="peer h-14 w-full text-white px-4 border-none bg-transparent placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0"
-                        placeholder="Enter Identity Name"
+                        placeholder="eg. John Doe"
+                        value={identityname} 
+                        onChange={(e) => setIdentityName(e.target.value)}
                         />
 
                         <span
                         className="pointer-events-none absolute start-2.5 top-0 -translate-y-1/2 bg-emerald-600 p-0.5 text-xs text-white transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs"
                         >
-                        Enter Identity Name
+                        eg. John Doe
                         </span>
                     </label>
                     </a>

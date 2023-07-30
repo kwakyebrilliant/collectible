@@ -47,6 +47,15 @@ function Connect() {
                         </h3>
                         )}
                 </h3>
+                <div className="flow-root">
+                    <ul className="-m-1 flex flex-wrap">
+                    <li className="p-1 leading-none">
+                        <a className="text-xs font-medium text-gray-300"> 
+                            0x7fv7...9BFnb
+                        </a>
+                    </li>
+                    </ul>
+                </div>
                 </div>
             </div>
 

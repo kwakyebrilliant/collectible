@@ -36,7 +36,17 @@ function Connect() {
                 />
 
                 <div>
-                <h3 className="text-lg font-medium text-white">{identityname}</h3>
+                <h3 className="text-lg font-medium text-white">
+                {identityname ? (
+                        <h3 className="text-lg font-medium text-white">
+                          {identityname}
+                        </h3>
+                        ) : (
+                          <h3 className="text-lg font-medium text-white">
+                          Identity Name
+                        </h3>
+                        )}
+                </h3>
                 </div>
             </div>
 

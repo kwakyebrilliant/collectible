@@ -57,7 +57,7 @@ function Connect() {
                     </ul>
                 </div>
                 </div>
-            </div>
+            </div> 
 
             <ul className="mt-4 space-y-2">
                 <li>

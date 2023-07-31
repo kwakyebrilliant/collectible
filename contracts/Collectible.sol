@@ -25,5 +25,10 @@ contract Collectible {
     event NFTListed(uint256 indexed tokenId, uint256 price);
     event NFTAcquired(uint256 indexed tokenId, address indexed buyer);
     event NFTResold(uint256 indexed tokenId, uint256 newPrice);
-    
+
+    //constructor
+    constructor() {
+        owner = msg.sender;
+    }
+
 }

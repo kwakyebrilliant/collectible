@@ -37,6 +37,29 @@ contract Collectible {
         _;
     }
 
+    //create NFT function
+    function createNFT(
+        uint256 _price,
+        string memory _title,
+        string memory _description,
+        string memory _media
+    ) external {
+        require(_price > 0, "Price must be greater than 0");
+        totalNFTs++;
+        nfts[totalNFTs] = NFT({
+            owner: msg.sender,
+            price: _price,
+            status: true,
+            title: _title,
+            description: _description,
+            media: _media
+        });
+
+        userToNFTs[msg.sender].push(totalNFTs);
+
+        emit NFTCreated(totalNFTs, msg.sender);
+    }
+
     
 
 }

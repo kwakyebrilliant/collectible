@@ -31,4 +31,12 @@ contract Collectible {
         owner = msg.sender;
     }
 
+    //modifier
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Only the contract owner can call this function");
+        _;
+    }
+
+    
+
 }

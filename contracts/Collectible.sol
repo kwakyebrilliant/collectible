@@ -93,6 +93,12 @@ contract Collectible {
         emit NFTAcquired(_tokenId, msg.sender);
     }
 
+
+    //Function to list all acquired NFTs by a user
+     function listNFTAcquired() external view returns (uint256[] memory) {
+        return userToAcquiredNFTs[msg.sender];
+    }
+
     
 
 }

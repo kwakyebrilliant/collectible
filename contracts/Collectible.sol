@@ -60,6 +60,18 @@ contract Collectible {
         emit NFTCreated(totalNFTs, msg.sender);
     }
 
-    
+    //Function to list NFTs created by a specific user
+    function listNFTbyUser(address _user) external view returns (uint256[] memory) {
+        return userToNFTs[_user];
+    }
+
+    //Function to list all NFTs on the platform
+    function listAllNFT() external view returns (uint256[] memory) {
+        uint256[] memory allNFTs = new uint256[](totalNFTs);
+        for (uint256 i = 1; i <= totalNFTs; i++) {
+            allNFTs[i - 1] = i;
+        }
+        return allNFTs;
+    }
 
 }

@@ -74,4 +74,25 @@ contract Collectible {
         return allNFTs;
     }
 
+    //Function to allow a user to buy an NFT
+    function buyNFT(uint256 _tokenId) external payable {
+        require(_tokenId <= totalNFTs, "Invalid NFT tokenId");
+        NFT storage nft = nfts[_tokenId];
+        require(nft.status == true, "NFT is not listed for sale");
+        require(msg.value >= nft.price, "Insufficient funds");
+        require(nft.owner != msg.sender, "You cannot buy your own NFT");
+
+        nft.status = false;
+        userToAcquiredNFTs[msg.sender].push(_tokenId);
+
+        address payable previousOwner = payable(nft.owner);
+        previousOwner.transfer(nft.price);
+
+        nft.owner = msg.sender;
+
+        emit NFTAcquired(_tokenId, msg.sender);
+    }
+
+    
+
 }

@@ -99,6 +99,17 @@ contract Collectible {
         return userToAcquiredNFTs[msg.sender];
     }
 
-    
+    //Function to allow a user to sell an acquired NFT
+    function resellNFT(uint256 _tokenId, uint256 _newPrice) external {
+        require(_tokenId <= totalNFTs, "Invalid NFT tokenId");
+        NFT storage nft = nfts[_tokenId];
+        require(nft.owner == msg.sender, "You are not the owner of this NFT");
+        require(nft.status == false, "NFT must be acquired to be resold");
+
+        nft.price = _newPrice;
+        nft.status = true;
+
+        emit NFTResold(_tokenId, _newPrice);
+    }    
 
 }

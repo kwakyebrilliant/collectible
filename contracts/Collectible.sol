@@ -36,6 +36,7 @@ contract Collectible {
         require(msg.sender == owner, "Only the contract owner can call this function");
         _;
     }
+    
 
     //create NFT function
     function createNFT(

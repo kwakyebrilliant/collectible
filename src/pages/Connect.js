@@ -53,7 +53,7 @@ function Connect() {
                         <a className="text-xs font-medium text-gray-300"> 
                             0x7fv7...9BFnb
                         </a>
-                    </li>
+                    </li> 
                     </ul>
                 </div>
                 </div>

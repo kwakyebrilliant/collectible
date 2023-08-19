@@ -9,7 +9,7 @@ function Connect() {
     const [identityname, setIdentityName] = useState('');
 
     const handleGoBack = () => {
-        window.history.back(); 
+        window.history.back();
       };
 
   return (

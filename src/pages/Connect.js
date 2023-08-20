@@ -7,7 +7,7 @@ import logo from '../assets/logo.png'
 function Connect() {
 
     const [identityname, setIdentityName] = useState('');
-
+ 
     const handleGoBack = () => {
         window.history.back();
       };
